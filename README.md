@@ -3,6 +3,7 @@
   
   * É um programa que resolve sudoku, usando um algoritmo de backtrack
 <br>
+
   * O programa pode ser corrido em 2 modos:
         
     * Modo de visualização do algoritmo, onde o algoritmo de backtrack corre dando display de cada passo (dando assim para observar a forma que o algoritmo funciona)
