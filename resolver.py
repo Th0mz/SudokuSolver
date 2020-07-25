@@ -18,16 +18,16 @@ tamanho = (41, 21)
 
 
 def init():
+    """ Inicializar o resultado do sudoku """
     global sudoku_resolvido
     sudoku_resolvido = [[] for i in range(9)]
 
 def posicoes_possiveis(sudoku, posicao):
-    """ Obtem todos os numeros possiveis para 
-          um espaco dado pela posicao """
+    """ Obtem todos os numeros possiveis para um espaco dado pela posicao """
 
     posicoes_possiveis = list(range(1, 10))
 
-    # Verificar coluna
+    # Verificar coluna 
     for i in range(len(sudoku)):
         numero = sudoku[i][posicao[x]] 
         if numero in posicoes_possiveis:
@@ -63,17 +63,19 @@ def espacos_brancos(sudoku):
 
 
 def resolve(sudoku, velocidade, gui_mode):
-    """ Resolve o sudoku passado como argumento
-          usando um algoritmo de backtrack """
+    """ Resolve o sudoku passado como argumento usando um algoritmo de backtrack """
     num_espacos = espacos_brancos(sudoku)
     global nao_parar
 
+    # Percorre todas as posições do sudoku
     for i in range(len(sudoku)):
         for j in range(len(sudoku[0])):
             # Verificar se é um espaço vazio
             if sudoku[i][j] == _:
                 numeros_possiveis = posicoes_possiveis(sudoku, (j, i))
                 num_espacos -= 1
+
+                # Testa todas as posições possiveis para aquele espaço
                 for numero in numeros_possiveis:
                     sudoku[i][j] = numero
 
@@ -84,6 +86,7 @@ def resolve(sudoku, velocidade, gui_mode):
                     if num_espacos == 0:
                         nao_parar = False
                     
+                    # Chamada recursiva
                     resolve(sudoku, velocidade, gui_mode)
                     sudoku[i][j] = _
                     num_espacos += 1
@@ -94,6 +97,7 @@ def resolve(sudoku, velocidade, gui_mode):
 
 
 def copia_sudoku(sudoku):
+    """ Copia o sudoku para a variavel global sudoku_resolvido """
     global sudoku_resolvido
 
     for i in range(len(sudoku)):
