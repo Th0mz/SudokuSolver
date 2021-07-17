@@ -1,7 +1,6 @@
 ## Sudoku Solver
 ---
   * Given any solvable sudoku board, using a backtrack algorithm this program solves it.
-<br>
 
   * It can be run in two modes:
     
