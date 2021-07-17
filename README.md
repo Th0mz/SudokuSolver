@@ -1,15 +1,13 @@
 ## Sudoku Solver
 ---
-  
-  * É um programa que resolve sudoku, usando um algoritmo de backtrack
+  * Given any solvable sudoku board, using a backtrack algorithm this program solves it.
 <br>
+  * It can be run in two modes:
+    
+    * Visualization Mode : Where is displayed every step that the algorithm takes to get to the solution. Its good way to have a basic understanding of how the algorithm works.
 
-  * O programa pode ser corrido em 2 modos:
-        
-    * Modo de visualização do algoritmo, onde o algoritmo de backtrack corre dando display de cada passo (dando assim para observar a forma que o algoritmo funciona)
-
-    * Modo instantâneo que não mostra todos os passos do algoritmo apenas o resultado final
-
+    * Instant Mode : Just shows the solution.
 <br>  
-  
-  * Para alem de se poder resolver o sudoku, o programa permite também uma forma de dar input do seu proprio sudoku
+
+  * In addition to being able to solve the sudoku, the program also allows a way to input your own sudoku to solve.
+  ---
