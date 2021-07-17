@@ -2,6 +2,7 @@
 ---
   * Given any solvable sudoku board, using a backtrack algorithm this program solves it.
 <br>
+
   * It can be run in two modes:
     
     * Visualization Mode : Where is displayed every step that the algorithm takes to get to the solution. Its good way to have a basic understanding of how the algorithm works.
