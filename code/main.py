@@ -8,7 +8,7 @@ y = 1
 _ = ' '
 
 # Inicializar sudoku já guardado no documento anteriormente
-with open("sudoku.txt", "r") as ficheiro:
+with open("../sudoku.txt", "r") as ficheiro:
     sudoku = eval(ficheiro.readline())
 
 # Funcionalidades de cada opção do menu
